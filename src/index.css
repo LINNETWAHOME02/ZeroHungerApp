@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&display=swap');
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #f5f5f5;
+}
+
+/* Styling for the NavBar.jsx styling on scrolling tnrough lighter sections of the page */
+.dark-navbar{
+    background: linear-gradient(rgba(50, 4, 0, 1), rgba(59, 4, 0, 0.902));
+    transition: 0.4s;
+}
+
+/* Styling for the banner */
+.banner {
+    width: 100%;
+    min-height: 100vh;
+    background:linear-gradient(rgba(58, 4, 0, 0.7), rgba(26, 0,58,0.7)), url('../src/assets/children.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+/* Styling for any button tag in the web page*/
+.btn{
+    background: #fff;
+    color: #2d1345;
+    padding: 16px 50px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+}
+
+/* Styling for the AnyTitle.jsx component */
+.title{
+    text-align: center;
+    color: #3b0400e6;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 70px 0 30px;
+}
+.title p{
+    font-size: 25px;
+}
+.title h2{
+    font-size: 32px;
+    color: #662723e6;
+    margin-top: 5px;
+    text-transform: none;
+}
+
+/* Styling for Projects.jsx cards */
+.projects-card{
+    flex-basis: 40%;
+    position: relative;
+}
+
+/* Styling for images in the Projects.jsx component with this classname*/
+.projects-images{
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Styling for the Projects.jsx cards captions */
+.caption{
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(58, 4, 0, 0.6), rgba(26, 0,58,0.6));
+    color: #f5f5f5;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 700;
+    cursor: pointer;
+    opacity: 0; /*Hide the overlay on hovering*/
+    padding-top: 70%;
+    transition: 0.8s;
+}
+.caption-img{
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.projects-card:hover .caption{
+    opacity: 1;
+    padding-top: 0;
+}
+
+/* CompletedProjects.jsx images styling */
+.gallery-img{
+    width: 22%;
+    border-radius: 10px;
+}
+
+.btn.dark-btn{
+    background: linear-gradient(rgba(58, 4, 0, 0.9), rgba(26, 0,58,0.7));
+    color: #f5f5f5;
+    padding: 16px 70px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin: 20px auto;
+}
