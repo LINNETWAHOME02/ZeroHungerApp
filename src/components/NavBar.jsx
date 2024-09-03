@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   // To change the navbar styling to dark syling on scrolling to ligher section of the page
@@ -19,11 +20,21 @@ const NavBar = () => {
         </a>
 
         <ul className='flex gap-5 mr-15'>
-            <li>Home</li>
-            <li>Volunteer</li>
-            <li>Food Stamps</li>
-            <li>Locations</li>
-            <li>About</li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/projects">Volunteer</Link>
+            </li>
+            <li>
+              <Link to="/completed-projects">Food Stamps</Link>
+            </li>
+            <li>
+              <Link to="/locations">Locations</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
         </ul>
     </nav>
   )
